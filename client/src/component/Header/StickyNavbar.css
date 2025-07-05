@@ -1,0 +1,268 @@
+.navbar {
+  background: #fff0f5; /* Light lavender pink */
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar.sticky {
+  background: #fff0f5; /* Light lavender pink */
+}
+#ex4 .p1[data-count]:after {
+    position: absolute;
+    right: 10%;
+    top: 8%;
+    content: attr(data-count);
+    font-size: 40%;
+    padding: .2em;
+    border-radius: 50%;
+    line-height: 1em;
+    color: white;
+    background: rgba(255, 0, 0, .85);
+    text-align: center;
+    min-width: 18px;
+  }
+  
+  #ex4 .fa-stack {
+    width: 1.5em;
+  }
+  
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  z-index: 1;
+  width: 100%;
+  padding: 0 24px;
+  max-width: 1100px;
+  font-family: 'Georgia', serif;
+}
+
+.navbar-logo {
+  color: #333;
+  justify-self: start;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  margin-left: 24px;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+  margin-right: -22px;
+}
+
+.nav-item {
+  height: 80px;
+}
+
+/* "#e91e63" : "#e0e0e0" */
+.btn {
+  width: 100%;
+  padding: 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  background-color: #e0e0e0; /* Primary pink */
+  color: rgb(39, 38, 38);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #c2185b; /* Darker pink on hover */
+  color: white;
+}
+.menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    background: #fff0f5; /* Light lavender pink */
+  }
+
+  .nav-menu.active {
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  /* .nav-links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  .nav-links:hover {
+    background-color: #333;
+    color: #fff;
+    border-radius: 0;
+  } */
+
+
+
+
+
+
+
+
+  .navbar-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(25%, 50%);
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #333;
+  }
+}
+.nav_main {
+    background-color: #fff0f5; /* Light lavender pink */
+    border-radius: 12px;        /* Soft rounded corners */
+    box-shadow: 0 4px 12px rgba(138, 43, 226, 0.15); /* Soft violet shadow */
+    padding: 15px 30px;
+    margin: 20px auto;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #f3d1e3; /* Subtle border */
+  }
+  
+  
+  
+  .span-a {
+    color: #8A2BE2;
+    /* Violet */
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 10px;
+    font-weight: lighter;
+    transition: color 0.2s ease-in-out;
+    display: inline-block;
+    font-weight: bold;
+   
+    position: relative;
+    animation: moveSideways 4s ease-in-out infinite;
+  }
+  
+  .nav_main a:hover {
+    color: #DA70D6;
+    /* Orchid pink on hover */ 
+  }
+  
+  
+  
+  
+  .brand-name {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    color: #af89a5;
+    /* Elegant violet */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  
+  .brand-name::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 2px;
+    background-color: #853f3f;
+    margin: 8px auto 0;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+  }
+  
+  .brand-name:hover::after {
+    width: 120px;
+  }
+  
+  
+  @keyframes moveSideways {
+    0% {
+      left: 0;
+    }
+    50% {
+      left: 100px;  /* move 100px to the right */
+    }
+    100% {
+      left: 0;
+    }
+  }
+
+/* Icon and Tooltip Styles */
+.icon-container {
+    position: relative;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.nav-icon {
+    color: #333;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-size: 1rem;
+}
+
+.icon-tooltip {
+    visibility: hidden;
+    width: 80px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 125%; /* Position the tooltip below the icon */
+    left: 50%;
+    margin-left: -40px; /* Use half of the width to center the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.icon-container:hover .icon-tooltip {
+    visibility: visible;
+    opacity: 1;
+}
