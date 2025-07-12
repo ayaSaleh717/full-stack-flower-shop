@@ -53,7 +53,7 @@ const Categorys = ({ selectedCategory, onSelectCategory }) => {
                     padding: "10px 15px",
                     backgroundColor:
                       selectedCategory === category.catId ? "#e91e63" : "#e0e0e0",
-                    color: selectedCategory === category.id ? "#fff" : "#000",
+                    color: selectedCategory === category.catId ? "#fff" : "#000",
                     border: "none",
                     borderRadius: "4px",
                     cursor: "pointer",
@@ -67,5 +67,3 @@ const Categorys = ({ selectedCategory, onSelectCategory }) => {
 };
 
 export default Categorys;
-
-

@@ -11,6 +11,17 @@ const getProducts = async (req, res) => {
   }
 };
 
+const getProductsByCategory = async (req, res) => {
+  try {
+    const { categoryId } = req.params;
+    const [rows] = await db.query('SELECT * FROM product WHERE catId = ?', [categoryId]);
+    res.status(200).json(rows);
+  } catch (error) {
+    console.error('Error fetching products by category:', error);
+    res.status(500).json({ message: 'Server error' });
+  }
+};
+
 
 
 const addProduct = async (req, res) => {
@@ -82,4 +93,4 @@ const deleteProduct = async (req, res) => {
   }
 };
 
-module.exports = { getProducts, addProduct, getProductsByUser, deleteProduct };
+module.exports = { getProducts, addProduct, getProductsByUser, deleteProduct, getProductsByCategory };

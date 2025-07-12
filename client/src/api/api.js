@@ -33,8 +33,9 @@ export const getCategories = async () => {
   return response.data;
 };
 
-export const getProducts = async () => {
-    const response = await api.get('/products');
+export const getProducts = async (category) => {
+    const url = category ? `/products/category/${category}` : '/products';
+    const response = await api.get(url);
     return response.data;
 };
 
